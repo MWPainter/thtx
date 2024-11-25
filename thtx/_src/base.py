@@ -1,24 +1,62 @@
-# Copyright 2021 DeepMind Technologies Limited. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ==============================================================================
-"""Core types used in mctx."""
+# Adapted from https://github.com/google-deepmind/mctx
+"""Core types used in thtx."""
 
 from typing import Any, Callable, Generic, TypeVar, Tuple
 
 import chex
 
 from thtx._src import tree
+
+
+# Datatypes for actions and state embeddings
+Action = chex.Array
+StateEmbedding = Any
+
+@chex.dataclass(frozen=True)
+class RootInitFnOutput:
+  """Values needed to initialise the root node of a tree.
+
+  prior_policy_logits: `[B, num_actions]` the logits produced by a policy network.
+  value: `[B]` an approximate value of the current state.
+  state_embedding: `[B, ...]` embeddings for the initial state of the search tree.
+  """
+  prior_policy_logits: chex.Array
+  value: chex.Array
+  state_embedding: StateEmbedding
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+######
+# MCTX stuff
+######
 
 
 # Parameters are arbitrary nested structures of `chex.Array`.

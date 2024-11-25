@@ -14,54 +14,56 @@
 # ==============================================================================
 """Mctx: Monte Carlo tree search in JAX."""
 
-from thtx._src.action_selection import gumbel_muzero_interior_action_selection
-from thtx._src.action_selection import gumbel_muzero_root_action_selection
-from thtx._src.action_selection import GumbelMuZeroExtraData
-from thtx._src.action_selection import muzero_action_selection
-from thtx._src.base import ChanceRecurrentFnOutput
-from thtx._src.base import DecisionRecurrentFnOutput
-from thtx._src.base import InteriorActionSelectionFn
-from thtx._src.base import LoopFn
-from thtx._src.base import PolicyOutput
-from thtx._src.base import RecurrentFn
-from thtx._src.base import RecurrentFnOutput
-from thtx._src.base import RecurrentState
-from thtx._src.base import RootActionSelectionFn
-from thtx._src.base import RootFnOutput
-from thtx._src.policies import gumbel_muzero_policy
-from thtx._src.policies import muzero_policy
-from thtx._src.policies import stochastic_muzero_policy
-from thtx._src.qtransforms import qtransform_by_min_max
-from thtx._src.qtransforms import qtransform_by_parent_and_siblings
-from thtx._src.qtransforms import qtransform_completed_by_mix_value
-from thtx._src.search import search
-from thtx._src.tree import Tree
+# TODO: unsure why having this was creating circular import from jupyter notebook, should uncomment stuff later
+
+# from thtx._src.action_selection import gumbel_muzero_interior_action_selection
+# from thtx._src.action_selection import gumbel_muzero_root_action_selection
+# from thtx._src.action_selection import GumbelMuZeroExtraData
+# from thtx._src.action_selection import muzero_action_selection
+# from thtx._src.base import ChanceRecurrentFnOutput
+# from thtx._src.base import DecisionRecurrentFnOutput
+# from thtx._src.base import InteriorActionSelectionFn
+# from thtx._src.base import LoopFn
+# from thtx._src.base import PolicyOutput
+# from thtx._src.base import RecurrentFn
+# from thtx._src.base import RecurrentFnOutput
+# from thtx._src.base import RecurrentState
+# from thtx._src.base import RootActionSelectionFn
+# from thtx._src.base import RootFnOutput
+# from thtx._src.policies import gumbel_muzero_policy
+# from thtx._src.policies import muzero_policy
+# from thtx._src.policies import stochastic_muzero_policy
+# from thtx._src.qtransforms import qtransform_by_min_max
+# from thtx._src.qtransforms import qtransform_by_parent_and_siblings
+# from thtx._src.qtransforms import qtransform_completed_by_mix_value
+# from thtx._src.search import search
+# from thtx._src.tree import Tree
 
 __version__ = "0.0.5"
 
 __all__ = (
-    "ChanceRecurrentFnOutput",
-    "DecisionRecurrentFnOutput",
-    "GumbelMuZeroExtraData",
-    "InteriorActionSelectionFn",
-    "LoopFn",
-    "PolicyOutput",
-    "RecurrentFn",
-    "RecurrentFnOutput",
-    "RecurrentState",
-    "RootActionSelectionFn",
-    "RootFnOutput",
-    "Tree",
-    "gumbel_muzero_interior_action_selection",
-    "gumbel_muzero_policy",
-    "gumbel_muzero_root_action_selection",
-    "muzero_action_selection",
-    "muzero_policy",
-    "qtransform_by_min_max",
-    "qtransform_by_parent_and_siblings",
-    "qtransform_completed_by_mix_value",
-    "search",
-    "stochastic_muzero_policy",
+    # "ChanceRecurrentFnOutput",
+    # "DecisionRecurrentFnOutput",
+    # "GumbelMuZeroExtraData",
+    # "InteriorActionSelectionFn",
+    # "LoopFn",
+    # "PolicyOutput",
+    # "RecurrentFn",
+    # "RecurrentFnOutput",
+    # "RecurrentState",
+    # "RootActionSelectionFn",
+    # "RootFnOutput",
+    # "Tree",
+    # "gumbel_muzero_interior_action_selection",
+    # "gumbel_muzero_policy",
+    # "gumbel_muzero_root_action_selection",
+    # "muzero_action_selection",
+    # "muzero_policy",
+    # "qtransform_by_min_max",
+    # "qtransform_by_parent_and_siblings",
+    # "qtransform_completed_by_mix_value",
+    # "search",
+    # "stochastic_muzero_policy",
 )
 
 #  _________________________________________
