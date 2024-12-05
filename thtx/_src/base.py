@@ -12,6 +12,12 @@ from thtx._src import tree
 Action = chex.Array
 StateEmbedding = Any
 
+# Datatypes for action selection function and outcome sample function
+NodeIndices = chex.Array
+Depth = chex.Array
+ActionSelectionFn = Callable[[chex.PRNGKey, tree.Tree, NodeIndices, Depth], chex.Array]
+OutcomeSampleFn = Callable[[chex.PRNGKey, tree.Tree, NodeIndices, Depth], chex.Array]
+
 @chex.dataclass(frozen=True)
 class RootInitFnOutput:
   """Values needed to initialise the root node of a tree.
@@ -22,7 +28,7 @@ class RootInitFnOutput:
   """
   prior_policy_logits: chex.Array
   value: chex.Array
-  state_embedding: StateEmbedding
+  state_embeddings: StateEmbedding
 
 
 
